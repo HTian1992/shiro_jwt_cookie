@@ -12,17 +12,17 @@ import org.springframework.context.annotation.Configuration;
 public class JwtProperties {
 
     //维护用户状态，里面保存的是用户信息/权限/状态被变更的最新时间。用于与token签发时间进行比较判断token有效性
-    public final static String USER_STATUS_CACHE_KEY = "travel:hotel:user:status:";
+    public final static String USER_STATUS_CACHE_KEY = "user:status:";
 
     //token黑名单
-    public final static String LOGIN_LIMIT = "travel:hotel:login:blacklist:";
+    public final static String LOGIN_LIMIT = "login:blacklist:";
 
-    public final static String AUTH_HEADER = "myauthorization";
+    public final static String AUTH_HEADER = "Authorization";
 
     public final static String JWT_TOKEN_HEADER_PREFIX = "Bearer ";
 
     //存放在cookie中的token值的 name
-    public final static String TOKEN_COOKIE_NAME = "travel_token";
+    public final static String TOKEN_COOKIE_NAME = "auth_token";
 
     /**
      * Token过期时间 单位为分钟
